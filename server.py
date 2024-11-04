@@ -48,7 +48,10 @@ def disconnect_client (client):
     )
     client["socket"].close()
     
-    send_message(f'{client["alias"]} has left the chat room!'.encode('utf-8'), "SERVER", CLIENTS)
+    try:
+        send_message(f'{client["alias"]} has left the chat room!'.encode('utf-8'), "SERVER", CLIENTS)
+    except Exception as e:
+        print(f"Error occurred while disconnecting client: {str(e)}")
 
 def handle_client(client):
     while not EXIT_FLAG.is_set():
