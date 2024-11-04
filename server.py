@@ -150,11 +150,6 @@ def receive_clients():
 
     # exit()
 
-# def handle_server ():
-#     command = input ("Enter 'exit()' to close the server: ")
-#     if command.strip() == "exit()":
-#         EXIT_FLAG.set()
-#         exit()
 
 # Server Sending Certificate
 if __name__ == "__main__":
